@@ -1,0 +1,33 @@
+# Node.js Loader
+
+<EpicVideo url="https://www.epicreact.dev/workshops/react-server-components/node.js-loader" />
+
+👨‍💼 Alright, we're going to get our server ready to start handling `'use client'`
+modules because we want to add some client-side interactivity to our app.
+
+We're planning on adding the ability to change the ship names by clicking on
+them. The idea is, the ship name is a button and when you click on it, it'll
+change to a form with an input which you can then submit and that will update
+the name. We'll get to the actual implementation for updating later, but for now
+we just need to get our client-side code for the edit state working.
+
+🧝‍♂️ I've created <InlineFile file="server/rsc-loader.js" /> which you'll need to
+register with Node.js as a loader for turning `'use client'` module exports into
+reference registrations.
+
+👨‍💼 Thanks Kellie. So now, what you need to do is register the loader, update the
+`dev` script in <InlineFile file="package.json" /> to import the loader
+registration.
+
+```sh nonumber nolang
+node --import ./server/register-rsc-loader.js --conditions=react-server --watch server/app.js
+```
+
+Now update the <InlineFile file="ui/edit-text.js" /> to add `'use client'` to
+the top of the module.
+
+When you're finished, we'll not actually be loading modules yet, but we'll be
+almost ready to do it! I recommend you add a couple console logs so you can
+observe what the loader does to our `'use client'` module exports.
+
+💰 I've put a couple good ones in place for you.

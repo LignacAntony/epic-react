@@ -1,0 +1,58 @@
+[
+  {
+    "module": "react-fundamentals",
+    "upstream": "https://github.com/epicweb-dev/react-fundamentals",
+    "sourceCommit": "25463f01b462dd7a25b2cd6797fda1feb8afba4c",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  },
+  {
+    "module": "react-hooks",
+    "upstream": "https://github.com/epicweb-dev/react-hooks",
+    "sourceCommit": "dbee25930628becfe86bb2fb41b26092abbc71af",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  },
+  {
+    "module": "advanced-react-apis",
+    "upstream": "https://github.com/epicweb-dev/advanced-react-apis",
+    "sourceCommit": "e9b6125d6c5be3addadccd3edeb99b2d58888ce0",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  },
+  {
+    "module": "react-suspense",
+    "upstream": "https://github.com/epicweb-dev/react-suspense",
+    "sourceCommit": "719b17e2ce2246bea4f688d744200a5047f583ca",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  },
+  {
+    "module": "advanced-react-patterns",
+    "upstream": "https://github.com/epicweb-dev/advanced-react-patterns",
+    "sourceCommit": "b5fa432ffc3fc55cf9a45d53adfe674b7302cc2f",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  },
+  {
+    "module": "react-performance",
+    "upstream": "https://github.com/epicweb-dev/react-performance",
+    "sourceCommit": "fa58fc0828ccc568fa435957feeb25f37b50102a",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  },
+  {
+    "module": "react-server-components",
+    "upstream": "https://github.com/epicweb-dev/react-server-components",
+    "sourceCommit": "aa63ecf5d3d0fdd1f0ef905456f5866ac70ad421",
+    "locallyDeletedFiles": [
+      "package-lock.json"
+    ]
+  }
+]

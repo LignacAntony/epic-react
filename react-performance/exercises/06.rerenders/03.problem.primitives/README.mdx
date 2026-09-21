@@ -1,0 +1,53 @@
+# Primitives
+
+<EpicVideo url="https://www.epicreact.dev/workshops/react-performance/primitives" />
+
+👨‍💼 I would love to have the performance improvement without all the complexity
+of the custom comparator function.
+
+The default comparator function is a simple `===` comparison. So if we changed
+the props a bit, we could take advantage of this.
+
+Remember our Avatar example before?
+
+```tsx
+const Avatar = memo(
+	function Avatar({ user }: { user: User }) {
+		return <img src={user.avatarUrl} alt={user.name} />
+	},
+	(prevProps, nextProps) => {
+		const avatarUnchanged =
+			prevProps.user.avatarUrl === nextProps.user.avatarUrl
+		const nameUnchanged = prevProps.user.name === nextProps.user.name
+		// return true if we don't want to re-render
+		return avatarUnchanged || nameUnchanged
+	},
+)
+```
+
+We could change the props for this component to be primitives instead of objects.
+
+```tsx
+const Avatar = memo(function Avatar({
+	avatarUrl,
+	name,
+}: {
+	avatarUrl: string
+	name: string
+}) {
+	return <img src={avatarUrl} alt={name} />
+})
+```
+
+And now we can use the default comparator function without specifying our own
+because a simple check with `===` will be enough.
+
+Let's do this for our `ListItem`.
+
+And make sure to check the before/after of your work!
+
+<callout-info>
+	🚨 There is no change in how many times the ListItem renders with this change
+	so the tests will be passing from the start. But you'll want to make sure the
+	tests continue to pass when you're finished.
+</callout-info>

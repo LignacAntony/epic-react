@@ -1,0 +1,25 @@
+# Streaming
+
+<EpicVideo url="https://www.epicreact.dev/workshops/react-server-components/streaming" />
+
+🧝‍♂️ I've added a long delay to the `searchShips` API to make the improvements
+here more noticable. Check <InlineFile file="db/ship-api.js" line={14} /> to see
+how.
+
+👨‍💼 Right now we display our loading screen until all the components finish
+rendering. But if we want to put some well placed `Suspense` boundaries around
+different server components, we can have a more granular loading experience.
+
+Please add some suspense boundaries around the search results and ship details
+so we can have things load in as they become ready.
+
+As you do, I want you to appreciate the out-of-order streaming we get here which
+enables a lot of flexibility in how we load things in (allowing us to prioritize
+the most important parts of the page first).
+
+<callout-warning>
+	Note: more spinners is not necessarily better. In fact, it would be better to
+	just server-render all of this stuff from the start and make it really fast so
+	you don't need loading states at all and you avoid cumulative layout shift.
+	But we're sticking with client-side rendering for now to keep things simple.
+</callout-warning>

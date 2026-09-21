@@ -1,114 +1,33 @@
-<div>
-  <h1 align="center"><a href="https://www.epicweb.dev/workshops">🔀 React Suspense</a></h1>
-  <strong>
-    Simplify your Async UI and improve your User Experience
-  </strong>
-  <p>
-    Learn how Suspense works under the hood, preparing you for the future of asynchronous state management.
-  </p>
-</div>
+# Epic React — notes et exercices
 
-<hr />
+Les sept ateliers de la formation [Epic React](https://www.epicreact.dev/) de **Kent C. Dodds**, regroupés dans un dépôt personnel.
 
-<div align="center">
-  <a
-    alt="Epic Web logo with the words Deployed Version"
-    href="https://suspense.epicreact.dev"
-  >
-    <img
-      width="300px"
-      src="https://github-production-user-asset-6210df.s3.amazonaws.com/1500684/254000390-447a3559-e7b9-4918-947a-1b326d239771.png"
-    />
-  </a>
-</div>
+| Module | Sujet |
+| --- | --- |
+| [react-fundamentals](react-fundamentals/) | Fondamentaux, JSX, composants et formulaires |
+| [react-hooks](react-hooks/) | Hooks, état et effets |
+| [advanced-react-apis](advanced-react-apis/) | Reducers, contexte, portails et APIs avancées |
+| [react-suspense](react-suspense/) | Suspense et chargement des données |
+| [advanced-react-patterns](advanced-react-patterns/) | Composition et patterns de composants |
+| [react-performance](react-performance/) | Optimisation des performances |
+| [react-server-components](react-server-components/) | Composants serveur et actions |
 
-<hr />
+## Organisation et provenance
 
-<!-- prettier-ignore-start -->
-[![Build Status][build-badge]][build]
-[![GPL 3.0 License][license-badge]][license]
-[![Code of Conduct][coc-badge]][coc]
-<!-- prettier-ignore-end -->
+Chaque module conserve ses fichiers, ses exercices, son README et sa licence d’origine. Ce dépôt regroupe des copies des modules ; ce ne sont pas des sous-modules Git. Les dépendances sont propres à chaque atelier.
 
-## Prerequisites
+Le dépôt reprend l’historique du dépôt personnel `LignacAntony/react-suspense`, renommé en `epic-react`. Les six autres ateliers sont importés dans leur état local au moment du regroupement, sans importer leur historique Git. Les commits sources et les suppressions locales sont consignés dans [sources.json](sources.json).
 
-- Install the React DevTools
-  ([Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-  (recommended),
-  [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/))
-- Experience with React and most hooks
+## Travail personnel sauvegardé
 
-## Pre-workshop Resources
+Les dossiers `playground` étaient ignorés par Git dans les dépôts d’origine. Leur contenu au moment du regroupement est sauvegardé dans [saved-playgrounds](saved-playgrounds/), avec un sous-dossier par module. L’image personnalisée de l’atelier Suspense est conservée dans [saved-assets](saved-assets/).
 
-Here are some resources you can read before taking the workshop to get you up to
-speed on some of the tools and concepts we'll be covering:
+Les `playground` de travail restent ignorés par Git. Pour sauvegarder une progression ultérieure, recopier les fichiers concernés dans `saved-playgrounds/<module>/` puis les committer. Les outils de setup des ateliers peuvent réinitialiser les playgrounds : les sauvegardes séparées permettent de conserver ce travail.
 
-- Dan Abramov's talk
-  [Beyond React 16 | JSConf Iceland 2018](https://www.youtube.com/watch?v=nLF0n9SACd4)
-  (33 minutes)
+## Utilisation
 
-## System Requirements
+Ouvrir le README du module souhaité. Chaque atelier dispose de son propre `package.json` et de ses commandes npm ; exécuter les commandes depuis le sous-dossier du module. Le regroupement n’a pas fait l’objet d’une validation du lancement des applications, et les fonctions du workshop qui dépendent de la structure du dépôt Git peuvent nécessiter une adaptation.
 
-- [git][git] v2.18 or greater
-- [NodeJS][node] v20 or greater
-- [npm][npm] v8 or greater
+## Licence
 
-All of these must be available in your `PATH`. To verify things are set up
-properly, you can run this:
-
-```shell
-git --version
-node --version
-npm --version
-```
-
-If you have trouble with any of these, learn more about the PATH environment
-variable and how to fix it here for [windows][win-path] or
-[mac/linux][mac-path].
-
-## Setup
-
-This is a pretty large project (it's actually many apps in one) so it can take
-several minutes to get everything set up the first time. Please have a strong
-network connection before running the setup and grab a snack.
-
-Follow these steps to get this set up:
-
-```sh nonumber
-git clone --depth 1 https://github.com/epicweb-dev/react-suspense.git
-cd react-suspense
-npm run setup
-```
-
-If you experience errors here, please open [an issue][issue] with as many
-details as you can offer.
-
-## Starting the app
-
-Once you have the setup finished, you can start the app with:
-
-```
-npm start
-```
-
-## The Workshop App
-
-Learn all about the workshop app on the
-[Epic Web Getting Started Guide](https://www.epicweb.dev/get-started).
-
-[![Kent with the workshop app in the background](https://github-production-user-asset-6210df.s3.amazonaws.com/1500684/280407082-0e012138-e01d-45d5-abf2-86ffe5d03c69.png)](https://www.epicweb.dev/get-started)
-
-<!-- prettier-ignore-start -->
-[npm]: https://www.npmjs.com/
-[node]: https://nodejs.org
-[git]: https://git-scm.com/
-[build-badge]: https://img.shields.io/github/actions/workflow/status/epicweb-dev/react-suspense/validate.yml?branch=main&logo=github&style=flat-square
-[build]: https://github.com/epicweb-dev/react-suspense/actions?query=workflow%3Avalidate
-[license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
-[license]: https://github.com/epicweb-dev/react-suspense/blob/main/LICENSE.md
-[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-[coc]: https://kentcdodds.com/conduct
-[win-path]: https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/
-[mac-path]: http://stackoverflow.com/a/24322978/971592
-[issue]: https://github.com/epicweb-dev/react-suspense/issues/new
-<!-- prettier-ignore-end -->
+Contenu pédagogique original de Kent C. Dodds / Epic Web. Les licences et attributions sont conservées dans chaque module. Voir également [LICENSE.md](LICENSE.md).
